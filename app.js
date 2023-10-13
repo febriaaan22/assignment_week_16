@@ -7,7 +7,7 @@ const songRouter = require("./routes/songRouter.js");
 const taylorRouter = require("./routes/taylorRouter.js");
 const authMiddleware = require("./middleware/authentication-middleware.js");
 
-const swaggerUi = require("swagger-ui-express");
+// const swaggerUi = require("swagger-ui-express");
 const yaml = require("yaml");
 // const openApiValidator = require('express-openapi-validator')
 const bodyParser = require("body-parser");
