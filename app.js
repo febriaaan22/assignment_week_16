@@ -19,13 +19,13 @@ dbConnection();
 app.use(cors());
 app.use(cookieParser());
 app.use(bodyParser.json());
-app.use(
-	"/api-docs",
-	swaggerUi.serve,
-	swaggerUi.setup(
-		yaml.parse(require("fs").readFileSync("./swagger/API.yaml", "utf8"))
-	)
-);
+// app.use(
+// 	"/api-docs",
+// 	swaggerUi.serve,
+// 	swaggerUi.setup(
+// 		yaml.parse(require("fs").readFileSync("./swagger/API.yaml", "utf8"))
+// 	)
+// );
 // app.use(openApiValidator.middleware({
 //     apiSpec: './swagger/API.yaml'
 // }));
