@@ -12,11 +12,13 @@ const yaml = require("yaml");
 // const openApiValidator = require('express-openapi-validator')
 const bodyParser = require("body-parser");
 const dbConnection = require("./config/dbconfig.js");
+const { applyCors } = require("./middleware/cors.js");
 
 const app = express();
 dbConnection();
 
-app.use(cors());
+// app.use(cors());
+applyCors(app);
 app.use(cookieParser());
 app.use(bodyParser.json());
 // app.use(
