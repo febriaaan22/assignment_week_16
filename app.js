@@ -13,10 +13,12 @@ const yaml = require("yaml");
 const bodyParser = require("body-parser");
 const dbConnection = require("./config/dbconfig.js");
 const { applyCors } = require("./middleware/cors.js");
+// const functions = require("firebase-functions");
 
 const app = express();
 dbConnection();
 
+// exports.week_17_irengfebrian = functions.https.onRequest(app);
 // app.use(cors());
 applyCors(app);
 app.use(cookieParser());
@@ -34,7 +36,7 @@ app.use(bodyParser.json());
 app.use(databaseMiddleware);
 
 app.get("/", (req, res) => {
-	res.send("Milestone Week 11");
+	res.send("Week 17");
 });
 
 app.use("/taylor", taylorRouter);

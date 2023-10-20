@@ -73,13 +73,15 @@ const login = async (req, res) => {
 				console.log(accessToken); //For Debugging Purpose
 				res.cookie("accessToken", accessToken, {
 					httpOnly: true,
-					secure: false,
+					secure: true,
+					sameSite: "None",
 					maxAge: 1 * 60 * 60 * 1000,
 				});
 				console.log(refreshToken); //For debugging purpose
 				res.cookie("refreshToken", refreshToken, {
 					httpOnly: true,
-					secure: false,
+					secure: true,
+					sameSite: "None",
 					maxAge: 7 * 24 * 60 * 60 * 1000,
 				});
 				res.json("Success Login");

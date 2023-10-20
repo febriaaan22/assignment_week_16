@@ -1,7 +1,7 @@
 const cors = require("cors");
 
 const setCors = (req, callback) => {
-	const allowedUrl = "http://localhost:5173";
+	const allowedUrl = "https://week-17-irengfebrian.web.app";
 	let corsOptions;
 
 	if (allowedUrl.includes(req.header("Origin"))) {
